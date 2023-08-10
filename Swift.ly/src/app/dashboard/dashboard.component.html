@@ -1,4 +1,28 @@
-<p>dashboard works!</p>
+<!--<p-toolbar>
+    <div class="p-toolbar-group-start">
+        <p-button label="Home" icon="pi pi-bars"styleClass="p-button-sm" class="mr-2"></p-button>
+        <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-sm p-button-success"></p-button>
+        <i class="p-toolbar-separator pi pi-bars mr-2" style="vertical-align: middle"></i>
+        <p-splitButton label="Save" icon="pi pi-check" [model]="items" styleClass="p-button-warning"></p-splitButton>
+    </div>
+    <div class="p-toolbar-group-middle">
+        HELLO
+    </div>
+    <div class="p-toolbar-group-end">
+        <p-button icon="pi pi-search" class="mr-2"></p-button>
+        <p-button icon="pi pi-calendar" styleClass="p-button-success mr-2"></p-button>
+        <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
+    </div>
+</p-toolbar>
+
+<p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
+<p-sidebar [(visible)]="sidebarVisible">
+    <h3>Sidebar</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+</p-sidebar>
 
 <a routerLink="dashboard/home">Home</a>
 <a routerLink="dashboard/deposit">Deposit</a>
@@ -6,4 +30,41 @@
 <a routerLink="dashboard/history">History</a>
 <a routerLink="/auth">Click Here</a>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>-->
+
+<div class="main">
+    <div class="top"></div>
+    <div class="top1"></div>
+    <div class="top2"></div>
+    <div class="content">
+        <div class="nav">
+            <div>
+                <p-button routerLink="dashboard/home" styleClass="p-button-text p-button-raised" label="Home" icon="pi pi-home"></p-button>
+            </div>
+            <div class="right">
+                <p-button routerLink="dashboard/history" styleClass="p-button-text p-button-info p-button-raised" label="History" icon="pi pi-list"></p-button>
+                <p-button routerLink="dashboard/withdraw" styleClass="p-button-text p-button-success p-button-raised" label="Withdraw" icon="pi pi-arrow-down-left"></p-button>
+                <p-button routerLink="dashboard/deposit" styleClass="p-button-text p-button-warning p-button-raised" label="Deposit" icon="pi pi-arrow-up-right"></p-button>
+                <p-button routerLink="dashboard/deposit" styleClass="p-button-text p-button-danger p-button-raised"*ngIf="!connected" icon="pi pi-power-off"></p-button>
+                <p-button styleClass="p-button-text p-button-info p-button-raised" label="Connect" *ngIf="connected" icon="pi pi-sign-in" iconPos="right"></p-button>
+            </div>
+            <div class="mobile">
+                <p-button (click)="sidebarVisible = true" styleClass="p-button-text p-button-info p-button-raised" icon="pi pi-bars"></p-button>
+            </div>
+        </div>
+
+        
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<p-sidebar [(visible)]="sidebarVisible" position="right">
+    <div class="mobile-nav">
+        <p-button styleClass="p-button-text p-button-sm p-button-raised" label="History" icon="pi pi-list" iconPos="right"></p-button>
+        <p-button styleClass="p-button-text p-button-sm p-button-warning p-button-raised" label="Deposit" icon="pi pi-arrow-up-right" iconPos="right"></p-button>
+        <p-button styleClass="p-button-text p-button-sm p-button-success p-button-raised" label="Withdraw" icon="pi pi-arrow-down-left" iconPos="right"></p-button>
+        <p-button styleClass="p-button-text p-button-sm p-button-info p-button-raised" label="Connect" *ngIf="connected" icon="pi pi-sign-in" iconPos="right"></p-button>
+    </div>
+</p-sidebar>
+
+

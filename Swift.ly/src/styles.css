@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeng/resources/themes/arya-purple/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+body {
+    font-family: var(--font-family);
+    padding: 10px;
+    box-shadow: 0 1px 1px 1px black;
+}
+
+@media only screen and (min-width: 720px) {
+    body {
+        margin: 25px 10%;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    body {
+        margin: 25px 15%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        margin: 25px 20%;
+    }
+}
