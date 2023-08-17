@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MenuItem, MessageService } from 'primeng/api';
+import { SpinnerService } from '../services/spinner.service';
+import { delay, timer } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,20 +12,21 @@ export class DashboardComponent {
 
   connected = false;
 
-  selected: string | undefined;
+  constructor(private spinner: SpinnerService) {
+  }
 
-  items: MenuItem[] = [
-    {
-      label: 'Deposit',
-      icon: 'pi pi-fw pi-arrow-up-right'
-    },
-    {
-      label: 'Withdraw',
-      icon: 'pi pi-fw pi-arrow-down-left'
-    },
-    {
-      label: 'History',
-      icon: 'pi pi-fw pi-list'
-    }
-  ];
+  public connect(): void {
+    this.spinner.show();
+    !this.connected ? setTimeout(() => { 
+          this.spinner.hide(); 
+          this.connected = true;
+        }, 5000) : setTimeout(() => { 
+          this.spinner.hide(); 
+          this.connected = false;
+        }, 5000);
+  }
+
+  public async showSpinner() {
+    
+  }
 }

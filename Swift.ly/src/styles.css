@@ -1,28 +1,33 @@
-@import "../node_modules/primeng/resources/themes/arya-purple/theme.css";
+@import "../node_modules/primeng/resources/themes/bootstrap4-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.css";
+
+html {
+    height: 100%;
+}
 
 body {
     font-family: var(--font-family);
     padding: 10px;
     box-shadow: 0 1px 1px 1px black;
+    height: 100%;
 }
 
 @media only screen and (min-width: 720px) {
     body {
-        margin: 25px 10%;
+        margin: 0 10%;
     }
 }
 
 @media only screen and (min-width: 1080px) {
     body {
-        margin: 25px 15%;
+        margin: 0 15%;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     body {
-        margin: 25px 20%;
+        margin: 0 20%;
     }
 }

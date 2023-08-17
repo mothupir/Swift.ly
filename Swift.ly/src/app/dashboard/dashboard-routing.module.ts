@@ -7,24 +7,24 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard/home',
+    path: 'home',
     component: HomeComponent
   },
   {
-    path: 'dashboard/deposit',
+    path: 'deposit',
     component: DepositComponent
   },
   {
-    path: 'dashboard/withdraw',
+    path: 'withdraw',
     component: WithdrawComponent
   },
   {
-    path: 'dashboard/history',
+    path: 'history',
     component: HistoryComponent
   },
   {
-    path: '',
-    redirectTo: 'dashboard/home',
+    path: 'dashboard',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
