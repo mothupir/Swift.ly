@@ -8,10 +8,10 @@
 }
 
 .spinner1, .spinner2, .spinner3 {
-  border: 3px solid var(--surface-b);
+  /*border: 3px solid var(--surface-b);*/
   position: fixed;
   border-radius: 50%;
-  border-top: 4px solid var(--primary-color);
+  border-top: 3px solid var(--primary-color);
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -32,6 +32,7 @@
   top: calc(50% - 22px);
   width: 44px;
   height: 44px;
+  background-color: black;
   -webkit-animation: spin2 2s linear infinite;
   animation: spin2 2s linear infinite;
 }

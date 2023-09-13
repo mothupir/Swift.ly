@@ -67,6 +67,13 @@
     </div>
 </div>
 
+<div class="theme-wrapper">
+    <div class="theme">
+        <p-button (onClick)="changeTheme()" styleClass="p-button-raised p-button-outlined p-button-rounded" icon="pi pi-sun"></p-button>
+        <p-button styleClass="p-button-raised p-button-outlined p-button-rounded" icon="pi pi-moon"></p-button>
+    </div>
+</div>
+
 <p-sidebar [(visible)]="sidebarVisible" position="right">
     <div class="mobile-nav">
         <p-button styleClass="p-button-text p-button-sm p-button-raised" label="History" icon="pi pi-list" iconPos="right"></p-button>

@@ -7,6 +7,9 @@ import { WithdrawComponent } from './withdraw/withdraw.component';
 import { HistoryComponent } from './history/history.component';
 import { HomeComponent } from './home/home.component';
 
+import { FormsModule } from '@angular/forms';
+import { RadioButtonModule } from 'primeng/radiobutton';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    FormsModule,
+    RadioButtonModule
   ]
 })
 export class DashboardModule { }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SpinnerService } from '../services/spinner.service';
-import { delay, timer } from 'rxjs';
+import { SpinnerService } from '../services/spinner/spinner.service';
+import { ThemeService } from '../services/theme/theme.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +12,7 @@ export class DashboardComponent {
 
   connected = false;
 
-  constructor(private spinner: SpinnerService) {
+  constructor(private spinner: SpinnerService, private theme: ThemeService) {
   }
 
   public connect(): void {
@@ -26,7 +26,7 @@ export class DashboardComponent {
         }, 5000);
   }
 
-  public async showSpinner() {
-    
+  public changeTheme() {
+    this.theme.change();
   }
 }

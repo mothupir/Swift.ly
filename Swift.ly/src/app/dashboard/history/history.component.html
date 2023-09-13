@@ -1,1 +1,25 @@
-<p>history works!</p>
+<div class="header">
+    <div class="title">Transactions</div>
+    <div class="options">
+        <div>
+            <p-radioButton (onClick)="optionChanged()" name="all" value="All" [(ngModel)]="view" inputId="all"></p-radioButton>
+            <label for="all" class="ml-2">All</label>
+        </div>
+        <div>
+            <p-radioButton (onClick)="optionChanged()" name="deposits" value="Deposits" [(ngModel)]="view" inputId="deposits"></p-radioButton>
+            <label for="deposits" class="ml-2">Deposits</label>
+        </div>
+        <div>
+            <p-radioButton (onClick)="optionChanged()" name="withdrawals" value="Withdrawals" [(ngModel)]="view" inputId="withdrawals"></p-radioButton>
+            <label for="withdrawals" class="ml-2">Withdrawals</label>
+        </div>
+    </div>
+</div>
+
+<div class="separator"></div>
+
+<div class="transactions">
+    <div class="transaction">
+        
+    </div>
+</div>

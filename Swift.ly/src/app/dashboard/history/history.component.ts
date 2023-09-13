@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent {
+  view: string = "All";
 
+  optionChanged() {
+    console.log(this.view);
+  }
 }

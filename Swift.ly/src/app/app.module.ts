@@ -12,6 +12,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { SidebarModule } from 'primeng/sidebar';
+import { SpeedDialModule } from 'primeng/speeddial';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { ToolbarModule } from 'primeng/toolbar';
 
@@ -30,6 +31,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     InputTextModule,
     ButtonModule,
     SidebarModule,
+    SpeedDialModule,
     SplitButtonModule,
     ToolbarModule
   ],

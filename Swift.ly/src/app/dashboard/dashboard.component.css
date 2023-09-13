@@ -163,6 +163,24 @@
     font-style: italic;
 }
 
+.theme-wrapper {
+    position: relative;
+}
+
+.theme {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.theme :hover {
+  opacity: 0.5;
+}
+
+.theme :active {
+  opacity: 0.5;
+}
+
 @media only screen and (max-width: 720px) {
     .right {
         display: none;
